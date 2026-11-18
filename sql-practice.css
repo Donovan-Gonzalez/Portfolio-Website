@@ -1,0 +1,136 @@
+/* sql-practice.css — styles for the SQL playground + side-by-side layout */
+
+.tools-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.tools-row>.Sql-Container {
+    flex: 1 1 420px;
+    margin: 0;
+    min-width: 0;
+}
+
+.Sql-Container {
+    background-color: rgba(0, 0, 0, 0.238);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    padding: 1px 20px 20px;
+}
+
+.sql-hint {
+    font-size: 0.8rem;
+    color: #a8b3c1;
+    margin: 0 0 10px;
+}
+
+.sql-hint code {
+    color: #7cd1ff;
+}
+
+#sqlExamples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.sql-chip {
+    background: rgba(0, 123, 255, 0.2);
+    border: 1px solid rgba(0, 123, 255, 0.4);
+    color: #7cd1ff;
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sql-chip:hover {
+    background: rgba(0, 123, 255, 0.4);
+}
+
+#sqlInput {
+    width: 100%;
+    min-height: 110px;
+    box-sizing: border-box;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.55);
+    color: #e8edf2;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.9rem;
+}
+
+.sql-actions {
+    display: flex;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+#sqlOutput {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.sql-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    font-family: system-ui, sans-serif;
+}
+
+.sql-table th,
+.sql-table td {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 4px 8px;
+    text-align: left;
+}
+
+.sql-table th {
+    background: rgba(0, 123, 255, 0.25);
+}
+
+.sql-null {
+    color: #a8b3c1;
+    font-style: italic;
+}
+
+.sql-msg {
+    font-size: 0.85rem;
+    margin: 6px 0;
+    color: #39FF14;
+}
+
+.sql-error {
+    color: crimson;
+}
+
+#sqlInput:focus {
+    outline: none;
+    border-color: #7cd1ff;
+}
+
+/* Run / Reset DB buttons (same look as the Grade Calculator button) */
+.sql-actions button {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sql-actions button:hover {
+    opacity: 0.85;
+}
+
+.sql-actions #sqlReset {
+    background: rgba(255, 255, 255, 0.15);
+}

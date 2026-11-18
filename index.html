@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="sql-practice.css">
+    <link rel="stylesheet" href="grade-calculator.css">
+</head>
+
+<body>
+    <header class="main-header" id="home">
+        <div class="nav-spacer"></div>
+        <div class="name-group">
+            <p class="p"></p>
+            <h1 class="Name">Donovan Gonzalez</h1>
+        </div>
+        <nav class="top-nav">
+            <a href="#projects">Projects</a>
+            <span class="self-hosted-badge">🟢 Self-Hosted</span>
+            <a href="mailto:don.gonzalez05@gmail.com">Contact Me</a>
+        </nav>
+    </header>
+
+    <nav class="links">
+        <a class="cs320-button" id="linkedin" href="https://www.linkedin.com/in/donovan-a-gonzalez/">LinkedIN
+            Profile</a>
+    </nav>
+    <div class="About-Container">
+        <h2><b>About Me</b></h2>
+        <section id="about">
+
+            <div class="image-container">
+                <img id="SecondImage" src="IMG_2308.jpeg" alt="Second pic of me">
+                <img id="myImage" src="IMG_4364.jpeg" alt="Picture of me">
+
+            </div>
+
+            <form>
+                <p class="about-text">Hi! I’m Donovan, a senior Computer Science student at Macaulay Honors College at
+                    CUNY Queens College, graduating in May
+                    2027. I’m currently a Data Cloud Intelligence intern on the Demo Pod team at Zeta Global, where I
+                    build client-facing
+                    demos, work with customer data, and explore AI tooling.
+
+                    Zeta is where MarTech hooked me. Seeing how a business turns raw data into real customer experiences
+                    changed how I think
+                    about technology: it’s not just about building systems, it’s about what those systems make possible
+                    for the business
+                    behind them. Today, almost every company’s success depends on how well its data infrastructure
+                    connects to the tools
+                    that act on it, and that’s the space I want to work in.
+
+                    That interest shapes my projects, from my Home Cloud Server, AWS Cloud Security & IAM Lab, and
+                    Cybersecurity Monitoring
+                    Lab, to my Macaulay capstone, a self-hosted Customer Data Platform. This site runs on that home
+                    server and serves as my
+                    portfolio. In my free time, I enjoy working out, playing video games, and exploring new tech. Feel
+                    free to reach out if
+                    you’d like to collaborate or talk tech!
+                </p>
+            </form>
+        </section>
+    </div>
+    <div class="Projects-Container" id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+
+            <article class="card tilt" data-tilt>
+                <h3>🏠 Home Cloud Server <span class="badge">Live</span></h3>
+                <p class="project-description">Self-hosted portfolio server built on an old MacBook Pro running Ubuntu
+                    Server — publicly accessible, HTTPS-secured, and remotely managed via zero-trust networking.</p>
+                <ul class="list">
+                    <li><strong>Server:</strong> Ubuntu Server (MacBook Pro)</li>
+                    <li><strong>Web Server:</strong> Nginx + Let's Encrypt (HTTPS)</li>
+                    <li><strong>DNS:</strong> DuckDNS dynamic DNS</li>
+                    <li><strong>Remote Access:</strong> Tailscale (WireGuard VPN)</li>
+                    <li><strong>Cloud:</strong> AWS Free Tier — IAM + MFA configured</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Linux</span>
+                    <span class="badge">Nginx</span>
+                    <span class="badge">TLS</span>
+                    <span class="badge">Tailscale</span>
+                    <span class="badge">AWS</span>
+                    <span class="badge">Networking</span>
+                </div>
+                <div class="card-links">
+                    <a class="back" href="https://donovan-gonzalez.duckdns.org:8443" target="_blank">🌐 Live Site</a>
+                    <a class="back" href="https://github.com/Donovan-Gonzalez/Personal-Cloud-Server-Home-Lab"
+                        target="_blank">📁 GitHub</a>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>☁️ AWS Cloud Security & IAM Lab <span class="badge">AWS</span></h3>
+                <p class="project-description">Simulated enterprise-grade cloud security by implementing IAM users,
+                    groups, and roles following least-privilege principles with custom JSON policies.</p>
+                <ul class="list">
+                    <li><strong>IAM:</strong> Users, groups, and roles with least-privilege design</li>
+                    <li><strong>Policies:</strong> Custom JSON policies and permission boundaries</li>
+                    <li><strong>Security:</strong> MFA on root account, IAM admin user separation</li>
+                    <li><strong>Workflows:</strong> Simulated enterprise RBAC and cross-service access</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">AWS</span>
+                    <span class="badge">IAM</span>
+                    <span class="badge">RBAC</span>
+                    <span class="badge">JSON Policies</span>
+                    <span class="badge">Cloud Security</span>
+                </div>
+                <div class="card-links">
+                    <a class="back" href="https://github.com/Donovan-Gonzalez/Aws-IAM-Lab" target="_blank">📁 GitHub</a>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🔍 Cybersecurity Monitoring Lab <span class="badge">Security</span></h3>
+                <p class="project-description">Investigated Windows Sysmon logs to detect suspicious activity, privilege
+                    escalation, and unauthorized access patterns using real event analysis.</p>
+                <ul class="list">
+                    <li><strong>Tool:</strong> Windows Sysmon log analysis</li>
+                    <li><strong>Detection:</strong> Suspicious process activity and privilege escalation</li>
+                    <li><strong>Events:</strong> Authentication, process creation, and network event IDs</li>
+                    <li><strong>Focus:</strong> Threat hunting and log-based incident investigation</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Sysmon</span>
+                    <span class="badge">Windows</span>
+                    <span class="badge">Log Analysis</span>
+                    <span class="badge">Threat Hunting</span>
+                    <span class="badge">DFIR</span>
+                </div>
+                <div class="card-links">
+                    <a class="back" href="https://github.com/Donovan-Gonzalez/Windows-Sysmon-Security-Monitoring-Lab"
+                        target="_blank">📁 GitHub</a>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🏰 Tower Defense <span class="badge">Unity</span></h3>
+                <p class="project-description">3D physics tower defense game with three levels, a coin economy, and a
+                    three-phase boss fight — built in Unity 6 for CSCI 381 (Video Game Design).</p>
+                <ul class="list">
+                    <li><strong>Towers:</strong> Rapid, Sniper, and splash-damage Bomber, with predictive aiming that
+                        leads moving targets</li>
+                    <li><strong>Enemies:</strong> 7 types, including an armored Golem, a flying UFO, and a Demon Boss
+                        that summons reinforcements</li>
+                    <li><strong>Economy:</strong> Coins per kill, locked towers when unaffordable, 8-tower cap per level
+                    </li>
+                    <li><strong>Art:</strong> Models, scenery, and textures generated in code from Unity primitives</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Unity</span>
+                    <span class="badge">C#</span>
+                    <span class="badge">Game Dev</span>
+                    <span class="badge">Physics</span>
+                    <span class="badge">Procedural</span>
+                </div>
+                <div class="card-links">
+                    <a class="back" href="https://github.com/Donovan-Gonzalez/TowerDefense_DonovanGonzalez"
+                        target="_blank">📁 GitHub</a>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🚀 Space Invaders 3D <span class="badge">Unity</span></h3>
+                <p class="project-description">3D take on the arcade classic built in Unity 6 for CSCI 381 — fixed and
+                    extended the professor's starter project.</p>
+                <ul class="list">
+                    <li><strong>Gameplay:</strong> Alien fleet speeds up as it shrinks, 3 lives shown as hearts, win
+                        and game-over screens</li>
+                    <li><strong>Fixes:</strong> Camera-based screen bounds, physics layers for clean collisions,
+                        removed redundant calls</li>
+                    <li><strong>Polish:</strong> Particle explosions, starfield background, custom ship with engine
+                        flame</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Unity</span>
+                    <span class="badge">C#</span>
+                    <span class="badge">Game Dev</span>
+                    <span class="badge">Particles</span>
+                </div>
+                <div class="card-links">
+                    <a class="back" href="https://github.com/Donovan-Gonzalez/SpaceInvaders_DonovanGonzalez"
+                        target="_blank">📁 GitHub</a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+    <div class="Courses-Container">
+        <h2>Relevant Courses</h2>
+        <div class="grid">
+
+            <article class="card tilt" data-tilt>
+                <h3>🛠️ CSCI 370 <span class="badge">In Progress</span></h3>
+                <p class="project-description"><strong>Software Engineering</strong> — Covers how real software gets
+                    planned,
+                    built, and maintained as a team effort.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> Software Development Lifecycle, Requirements, Design, Testing, Project
+                        Management</li>
+                    <li><strong>Project:</strong> Semester-long Java application with weekly progress reports</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Java</span>
+                    <span class="badge">SDLC</span>
+                    <span class="badge">Design</span>
+                    <span class="badge">Testing</span>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🔌 CSCI 343 <span class="badge">In Progress</span></h3>
+                <p class="project-description"><strong>Computer Architecture</strong> — Covers how computers work at the
+                    hardware level, from logic gates up to the processor.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> Digital Logic, K-Maps, Flip-Flops, Circuit Design, Floating-Point
+                        Representation</li>
+                    <li><strong>Up Next:</strong> Datapath design</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Logic Design</span>
+                    <span class="badge">K-Maps</span>
+                    <span class="badge">Flip-Flops</span>
+                    <span class="badge">Datapath</span>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🧮 CSCI 381 <span class="badge">In Progress</span></h3>
+                <p class="project-description"><strong>Computability and Complexity</strong> — Covers what computers can
+                    and can't solve, and how efficiently.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> Automata, Formal Languages, Turing Machines, Decidability, Complexity
+                        Classes</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Automata</span>
+                    <span class="badge">Turing Machines</span>
+                    <span class="badge">Decidability</span>
+                    <span class="badge">P vs NP</span>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🎮 CSCI 381 <span class="badge">In Progress</span></h3>
+                <p class="project-description"><strong>Video Game Design and Development</strong> — Covers building
+                    games from the ground up with a modern engine.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> Game Loops, Physics, Collision, Player Input, Scene Design</li>
+                    <li><strong>Project 1:</strong> Space Invaders recreation in Unity</li>
+                    <li><strong>Project 2:</strong> 3D tower defense with three levels and a boss fight</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Unity</span>
+                    <span class="badge">C#</span>
+                    <span class="badge">Game Dev</span>
+                    <span class="badge">Physics</span>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>📡 CSCI 381 <span class="badge badge-completed">Completed</span></h3>
+                <p class="project-description"><strong>Wireless Networks & Signals</strong> — Explores the principles
+                    behind modern wireless communication systems.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> IoT, Wireless Communication, Signal Processing, Protocols, Wi-Fi &
+                        Bluetooth</li>
+                    <li><strong>Group Project:</strong> Research presentation on conference paper — BlueFi</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">IoT</span>
+                    <span class="badge">Wi-Fi</span>
+                    <span class="badge">Bluetooth</span>
+                    <span class="badge">Signals</span>
+                    <span class="badge">Protocols</span>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🖥️ CSCI 340 <span class="badge badge-completed">Completed</span></h3>
+                <p class="project-description"><strong>Operating Systems</strong> — Covers how operating systems manage
+                    hardware and software resources.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> OS Design, Memory Management, File Systems, Process Management,
+                        Scheduling</li>
+                    <li><strong>Project 1:</strong> The Shell — Process creation, pipes, and I/O redirection</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">C</span>
+                    <span class="badge">Processes</span>
+                    <span class="badge">Memory</span>
+                    <span class="badge">Scheduling</span>
+                    <span class="badge">File Systems</span>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🗄️ CSCI 331 <span class="badge badge-completed">Completed</span></h3>
+                <p class="project-description"><strong>Database Systems</strong> — Covers the design, implementation,
+                    and querying of relational databases.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> SQL, ER Diagrams, Normalization, Relational Algebra</li>
+                    <li><strong>Project:</strong> Designing and building a full relational database from scratch</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">SQL</span>
+                    <span class="badge">ER Diagrams</span>
+                    <span class="badge">Normalization</span>
+                    <span class="badge">Databases</span>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>🌳 CSCI 313 <span class="badge badge-completed">Completed</span></h3>
+                <p class="project-description"><strong>Data Structures & Algorithms</strong> — Deep dive into
+                    fundamental data structures and algorithm design.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> Sorting Algorithms, Trees, Graphs, Linked Lists, Maps, Hash Tables</li>
+                    <li><strong>Projects:</strong> Built data structures from scratch: custom linked list, queue, stack,
+                        and more</li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Java</span>
+                    <span class="badge">Trees</span>
+                    <span class="badge">Graphs</span>
+                    <span class="badge">Sorting</span>
+                    <span class="badge">Linked Lists</span>
+                </div>
+            </article>
+
+            <article class="card tilt" data-tilt>
+                <h3>📊 CSCI 48 <span class="badge badge-completed">Completed</span></h3>
+                <p class="project-description"><strong>Spreadsheet Programming</strong> — Applied programming concepts
+                    using Excel, including automation and data analysis.</p>
+                <ul class="list">
+                    <li><strong>Topics:</strong> Excel Formulas, Macros, VBA Programming, Data Analysis</li>
+                    <li><strong>Final Project:</strong> Comprehensive Excel workbook combining formulas, macros, and VBA
+                    </li>
+                </ul>
+                <div class="tag-row">
+                    <span class="badge">Excel</span>
+                    <span class="badge">VBA</span>
+                    <span class="badge">Macros</span>
+                    <span class="badge">Data Analysis</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 4,
+            speed: 600,
+            glare: true,
+            "max-glare": 0.1,
+        });
+    </script>
+    <!-- SQL Playground: "defer" makes these run after the whole page (including the footer) is loaded -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js" defer></script>
+    <script src="sql-practice.js" defer></script>
+</body>
+<footer>
+    <div class="tools-row">
+        <div class="Grade-Container">
+            <h2>Grade Calculator</h2>
+
+            <div id="gradeResult" style="margin: 1rem 0; font-weight: 600;"></div>
+
+            <form id="gradeForm">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Weight (%)</th>
+                            <th>Grade (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Homework</td>
+                            <td><input type="number" step="0.01" name="w1" placeholder="e.g. 10" required></td>
+                            <td><input type="number" step="0.01" name="g1" placeholder="e.g. 90" required></td>
+                        </tr>
+                        <tr>
+                            <td>Classwork</td>
+                            <td><input type="number" step="0.01" name="w2" placeholder="e.g. 15" required></td>
+                            <td><input type="number" step="0.01" name="g2" placeholder="e.g. 92" required></td>
+                        </tr>
+                        <tr>
+                            <td>Quizzes</td>
+                            <td><input type="number" step="0.01" name="w3" placeholder="e.g. 20" required></td>
+                            <td><input type="number" step="0.01" name="g3" placeholder="e.g. 88" required></td>
+                        </tr>
+                        <tr>
+                            <td>Exams</td>
+                            <td><input type="number" step="0.01" name="w4" placeholder="e.g. 55" required></td>
+                            <td><input type="number" step="0.01" name="g4" placeholder="e.g. 85" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button type="submit">Calculate</button>
+            </form>
+        </div>
+
+        <div class="Sql-Container">
+            <h2>SQL Playground</h2>
+            <p class="sql-hint">Query my courses, projects &amp; skills. Tables: <code>courses</code>,
+                <code>projects</code>, <code>skills</code>, <code>project_skills</code>, <code>course_skills</code>
+            </p>
+            <div id="sqlExamples"></div>
+            <textarea id="sqlInput" spellcheck="false">SELECT * FROM projects;</textarea>
+            <div class="sql-actions">
+                <button type="button" id="sqlRun">Run ▶</button>
+                <button type="button" id="sqlReset">Reset DB</button>
+            </div>
+            <div id="sqlOutput"></div>
+        </div>
+    </div>
+    <section>
+        <div class="top-footer">
+            <a class="top-a" href="#home">↑ Back to the Top</a>
+        </div>
+    </section>
+</footer>
+
+</html>

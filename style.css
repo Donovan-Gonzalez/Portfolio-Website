@@ -1,0 +1,570 @@
+@charset "UTF-8";
+
+body {
+	font-size: 15pt;
+	font-family: Times New Roman;
+	display: center;
+	min-height: 100vh;
+	margin: 1px;
+	color: white;
+	position: relative;
+}
+
+/* Fixed gradient background that works on ALL devices including iOS Safari.
+   background-attachment: fixed is broken on iOS — this ::before trick
+   achieves the same effect using a GPU-composited fixed layer instead. */
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(180deg, black 0%, blue 50%, lightblue 100%);
+	z-index: -1;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	will-change: transform;
+}
+
+.main-header {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: center;
+	padding: 15px 40px;
+	background-color: transparent;
+	border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.self-hosted-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	background: rgba(0, 255, 100, 0.12);
+	border: 1px solid rgba(0, 255, 100, 0.3);
+	color: #00ff88;
+	font-size: 0.75rem;
+	font-weight: bold;
+	padding: 4px 12px;
+	border-radius: 20px;
+	letter-spacing: 0.5px;
+	white-space: nowrap;
+}
+
+.p {
+	background-color: transparent;
+	height: 20px;
+	width: 20px;
+	border-radius: 100%;
+	box-shadow: 10px 5px 5px red,
+		-10px -5px 5px yellow,
+		10px -5px 5px green,
+		-10px 5px 5px blue;
+	overflow: hidden;
+	transform: none;
+	flex-shrink: 0;
+}
+
+.Name {
+	color: whitesmoke;
+	font-weight: bold;
+	font-size: 2rem;
+	margin: 0;
+	text-align: center;
+}
+
+.top-nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+}
+
+.top-nav a {
+	color: whitesmoke;
+	font-weight: bold;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.top-nav a:hover {
+	color: white;
+}
+
+.name-group {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+@media (max-width: 1100px) {
+	.main-header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.top-nav {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	.top-nav a {
+		text-align: center;
+		font-size: 1rem;
+	}
+}
+
+.links {
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5px
+}
+
+#linkedin {
+	border: none;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
+	color: white;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	border-radius: 20px;
+	text-decoration: none;
+	background: linear-gradient(to right, #007bff, #00c6ff);
+}
+
+.about-text {
+	flex: 1;
+	text-align: center;
+	line-height: 1.6;
+}
+
+.About-Container {
+	border: none;
+	background: black;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.238);
+	border-radius: 16px;
+	margin: 20px;
+	padding: 20px;
+}
+
+#about {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 30px;
+	padding: 20px;
+	font-family: Times New Roman;
+}
+
+.image-container {
+	position: relative;
+	overflow: hidden;
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	flex-shrink: 0;
+}
+
+.image-container img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#myImage {
+	opacity: 0;
+	z-index: 1;
+}
+
+#myImage:hover {
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}
+
+#SecondImage {
+	opacity: 1;
+	z-index: 0;
+}
+
+#SecondImage:hover {
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+#aboutText {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	width: 400px;
+	height: 200px;
+	resize: none;
+	color: whitesmoke;
+	font-family: Times New Roman;
+	font-size: 18px;
+}
+
+#aboutText:placeholder {
+	color: black;
+	font-weight: bold;
+}
+
+.Projects-Container {
+	border: none;
+	background: black;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.238);
+	border-radius: 16px;
+	margin: 20px;
+	padding-top: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.project1-button {
+	background: linear-gradient(0deg, #007bff, #00c6ff);
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 20px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.Courses-Container {
+	border: none;
+	background: black;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.238);
+	border-radius: 16px;
+	margin: 20px;
+	padding-top: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.badge {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 20px;
+	font-size: 0.72rem;
+	font-weight: bold;
+	background: rgba(0, 123, 255, 0.2);
+	border: 1px solid rgba(0, 123, 255, 0.4);
+	color: #7cd1ff;
+}
+
+/* Green for completed courses/live projects */
+.badge-completed {
+	background: rgba(0, 255, 100, 0.12);
+	border: 1px solid rgba(0, 255, 100, 0.3);
+	color: #00ff88;
+}
+
+.cs320-button {
+	background: linear-gradient(to right, #007bff, #00c6ff);
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 20px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.cs320-button:hover {
+	opacity: 0.8;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
+	color: skyblue;
+	font-weight: bold;
+	background: white;
+	border-color: #3086a3;
+	border-radius: 20px;
+	margin-right: 8px;
+	margin-left: 8px;
+	cursor: pointer;
+	transition: opacity 0.15s,
+		padding-bottom 1s,
+		padding-top 1s,
+		padding-left 1s,
+		padding-right 1s,
+		background .15s,
+		color .15s;
+}
+
+.cs320-button:active {
+	opacity: 0.5;
+}
+
+.cs313-button {
+	background: linear-gradient(0deg, #007bff, #00c6ff);
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 20px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.cs313-button:hover {
+	opacity: 0.8;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
+	color: skyblue;
+	font-weight: bold;
+	background: white;
+	border-color: #3086a3;
+	border-radius: 20px;
+	margin-right: 8px;
+	margin-left: 8px;
+	cursor: pointer;
+	transition: opacity 0.15s,
+		padding-bottom 1s,
+		padding-top 1s,
+		padding-left 1s,
+		padding-right 1s,
+		background .15s,
+		color .15s;
+}
+
+.cs313-button:active {
+	opacity: 0.5;
+}
+
+.cs48-button {
+	background: linear-gradient(to left, #007bff, #00c6ff);
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 20px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.cs48-button:hover {
+	opacity: 0.8;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
+	color: skyblue;
+	font-weight: bold;
+	background: white;
+	border-color: #3086a3;
+	border-radius: 20px;
+	margin-right: 8px;
+	margin-left: 8px;
+	cursor: pointer;
+	transition: opacity 0.15s,
+		padding-bottom 1s,
+		padding-top 1s,
+		padding-left 1s,
+		padding-right 1s,
+		background .15s,
+		color .15s;
+}
+
+.cs48-button:active {
+	opacity: 0.5;
+}
+
+.Grade-Container {
+	border: none;
+	background: black;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.238);
+	border-radius: 16px;
+	margin: 20px;
+	padding-top: 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+body.results-page {
+	background-color: #fff;
+	font-family: system-ui, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.results-container {
+	background: black;
+	color: #fff;
+	border-radius: 16px;
+	padding: 2rem 3rem;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	width: 400px;
+}
+
+.results-container h1 {
+	color: #fff;
+	margin-bottom: 1px;
+}
+
+.grade strong,
+.letter strong {
+	color: #00ffff;
+}
+
+.error {
+	color: #b00020;
+	background: #ffeaea;
+	padding: 1px;
+	border-radius: 8px;
+}
+
+.back-button {
+	display: inline-block;
+	margin-top: 1.5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: #007bff;
+	color: white;
+	border-radius: 16px;
+	text-decoration: none;
+}
+
+.back-button:hover {
+	background: #0056b3;
+}
+
+.about-actions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.saveBtn {
+	background: linear-gradient(0deg, #007bff, #00c6ff);
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 20px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.saveBtn:hover {
+	opacity: 0.8;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
+	color: skyblue;
+	font-weight: bold;
+	background: white;
+	border-color: #3086a3;
+	border-radius: 20px;
+	margin-right: 8px;
+	margin-left: 8px;
+	cursor: pointer;
+	transition: opacity 0.15s,
+		padding-bottom 1s,
+		padding-top 1s,
+		padding-left 1s,
+		padding-right 1s,
+		background .15s,
+		color .15s;
+}
+
+.saveBtn:active {
+	opacity: 0.5;
+}
+
+.cancelEditBtn {
+	background: linear-gradient(0deg, #007bff, #00c6ff);
+	border: none;
+	color: white;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-radius: 20px;
+	margin-left: 5px;
+	text-decoration: none;
+}
+
+.cancelEditBtn:hover {
+	opacity: 0.8;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, .6);
+	color: skyblue;
+	font-weight: bold;
+	background: white;
+	border-color: #3086a3;
+	border-radius: 20px;
+	margin-right: 8px;
+	margin-left: 8px;
+	cursor: pointer;
+	transition: opacity 0.15s,
+		padding-bottom 1s,
+		padding-top 1s,
+		padding-left 1s,
+		padding-right 1s,
+		background .15s,
+		color .15s;
+}
+
+.cancelEditBtn:active {
+	opacity: 0.5;
+}
+
+.top-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background-color: transparent;
+}
+
+.top-a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+
+.top-a:hover {
+	color: darkslategrey;
+}
+
+/* ---------- Projects: one full-width row (only affects #projects) ---------- */
+#projects .grid {
+	max-width: none;
+	margin: 28px 0 20px;
+	padding: 0;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
